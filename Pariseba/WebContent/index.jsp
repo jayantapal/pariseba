@@ -3,6 +3,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<%
+	String contextPath = request.getScheme() + "://"+ request.getServerName() + ":" + request.getServerPort()+ request.getContextPath();
+
+%>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Internet Dreams</title>
 <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
@@ -53,7 +57,7 @@ $(document).pngFix( );
 		</tr>
 		<tr>
 			<th></th>
-			<td><input type="button" class="submit-login"  /></td>
+			<td><a href="<%=contextPath %>/jsp/booking/bookingForm.jsp"><input type="button" class="submit-login"  /></a></td>
 		</tr>
 		</table>
 	</div>
